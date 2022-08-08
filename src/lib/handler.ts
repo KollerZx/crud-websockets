@@ -20,9 +20,8 @@ export class Handler {
         return todos;
     }
     async update(id: string, entity: Todo){
-        const todo = await this.repository.update(id, entity);
-        this.server.emit("update", todo);
-        return todo;
+        await this.repository.update(id, entity);
+        this.server.emit("list", await this.repository.findAll());
     }
     async deleteById(id: string){
         const todo = await this.repository.deleteById(id);

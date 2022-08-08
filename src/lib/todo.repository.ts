@@ -6,7 +6,6 @@ export class InMemoryTodoRepository implements TodoRepository {
 
     async findAll(): Promise<Todo[]> {
         const entities = this.todos.map(t => Object.assign({}, t));
-        console.log('Todos encontrados: ', entities);
         return Promise.resolve(entities);
     }
 
@@ -30,7 +29,6 @@ export class InMemoryTodoRepository implements TodoRepository {
     async save(entity: Todo): Promise<Todo> {
         const todo = Object.assign(entity, { id: randomUUID() });
         this.todos.push(todo);
-        console.log('Todo salvo: ', todo);
         return Promise.resolve(todo);
     }
 

@@ -10,11 +10,7 @@ export function createApp(server: HttpServer, repository: TodoRepository, option
         console.log("a user connected", socket.id);
         socket.on("create", async (data) => await handler.create(data));
         socket.on("read", async (id) => await handler.findById(id));;
-        socket.on("update", async (data) => {
-            console.log('id', data.id)
-            console.log('data', data.todoData)
-            await handler.update(data.id, data.todoData);
-        });
+        socket.on("update", async (data) => await handler.update(data.id, data.payload));
         socket.on("delete", async (id) => await handler.deleteById(id));
         socket.on("list", async () => await handler.findAll());
     })
