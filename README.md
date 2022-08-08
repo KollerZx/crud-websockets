@@ -31,4 +31,4 @@ ou
 
 Um exemplo de frontend para consumir essa aplicação pode ser encontrado em:
 
-* **Frontend - CRUD com WebSockets** - *Desenvolvido por Leandro Cruz* [Repositório](https://github.com/leandrogcruzp)
+* **Frontend - CRUD com WebSockets** - *Desenvolvido por Leandro Cruz* [Repositório](https://github.com/LeandroGCruzP/crud-websockets-client)
