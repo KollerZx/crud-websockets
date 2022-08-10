@@ -1,10 +1,10 @@
 import { Server as HttpServer } from "http";
-import {Server} from "socket.io";
+import {Server, ServerOptions} from "socket.io";
 import { TodoRepository } from "../interfaces";
 import { Handler } from "./handler";
 
-export function createApp(server: HttpServer, repository: TodoRepository, options?: any){
-    const io = new Server(server);
+export function createApp(server: HttpServer, repository: TodoRepository, options?: Partial<ServerOptions>){
+    const io = new Server(server, options);
     const handler = new Handler(repository, io);
     io.on("connection", (socket) => {
         console.log("a user connected", socket.id);

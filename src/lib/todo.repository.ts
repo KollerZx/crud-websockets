@@ -17,11 +17,11 @@ export class InMemoryTodoRepository implements TodoRepository {
         return Promise.reject(new Error("not found"));
     }
 
-    async update(id: string, entity: Todo): Promise<Todo> {
+    async update(id: string, entity: Todo): Promise<void> {
         const todoIndex = this.todos.findIndex(t => t.id === id);
         if (todoIndex !== -1) {
             this.todos.splice(todoIndex, 1, {...entity, id});
-            return Promise.resolve(this.todos[todoIndex]);
+            Promise.resolve();
         }
         return Promise.reject(new Error("not found"));
     }
@@ -34,7 +34,7 @@ export class InMemoryTodoRepository implements TodoRepository {
 
     async deleteById(id: string): Promise<void> {
         const todoIndex = this.todos.findIndex(t => t.id === id);
-        if (todoIndex) {
+        if (todoIndex !== -1) {
             this.todos.splice(todoIndex, 1);
             return Promise.resolve();
         }

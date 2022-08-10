@@ -4,5 +4,5 @@ export interface TodoRepository {
     findById(id: string): Promise<Todo>;
     save(entity: Todo): Promise<Todo>;
     deleteById(id: string): Promise<void>;
-    update(id: string, entity: Todo): Promise<Todo>;
+    update(id: string, entity: Todo): Promise<void>;
 }
