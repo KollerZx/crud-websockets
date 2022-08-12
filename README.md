@@ -1,34 +1,45 @@
-# CRUD com WebSockets
+# WebSockets CRUD
 
-Um exemplo básico de implementação de CRUD com WebSockets
+A implementation basic sample CRUD with WebSockets
 
-### 🔧 Instalação
+### 🔧 Installation
 
-1 - Primeiro clone este repositório
+1 - First clone this repository
+```sh
+    git clone git@github.com:KollerZx/crud-websockets.git
+    
+    #OR
 
-2 - instale as depêndencias
+    git clone https://github.com/KollerZx/crud-websockets.git
+```
+2 - install the dependencies
 ```sh
     yarn 
-```
-ou
-```
+
+    #OR
+
     npm install
 ```
-3 - Execute o projeto
+
+3 - run the project
 
 ```sh
     yarn start
+
+    #OR
+
+    npm start
 ```
 
-> O servidor estará disponível em http://localhost:3000
+> The server will be available at http://localhost:3000
 
-## 🛠️ Construído com
+## 🛠️ Building with
 
 * [NodeJs]('https://nodejs.org/en/) - Versão Utilizada no projeto v16.16.0
 * [Socket.io]('https://socket.io/') - Versão Utilizada no projeto v4.5.1
 
 ## ✒️ Frontend
 
-Um exemplo de frontend para consumir essa aplicação pode ser encontrado em:
+A sample the frontend to consume this application, can be found at:
 
-* **Frontend - CRUD com WebSockets** - *Desenvolvido por Leandro Cruz* [Repositório](https://github.com/LeandroGCruzP/crud-websockets-client)
+* **Frontend - CRUD WebSockets - Client** - *Developed by Leandro Cruz* [Repositório](https://github.com/LeandroGCruzP/crud-websockets-client)
