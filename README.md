@@ -35,8 +35,8 @@ A implementation basic sample CRUD with WebSockets
 
 ## 🛠️ Building with
 
-* [NodeJs]('https://nodejs.org/en/) - Versão Utilizada no projeto v16.16.0
-* [Socket.io]('https://socket.io/') - Versão Utilizada no projeto v4.5.1
+* [NodeJs]('https://nodejs.org/en/) - Version used this project v16.16.0
+* [Socket.io]('https://socket.io/') - Version used this project v4.5.1
 
 ## ✒️ Frontend
 
